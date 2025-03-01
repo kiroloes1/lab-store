@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="./color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Sidebars · Bootstrap v5.3</title>
+        <!-- fontawesom -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- google font link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Indie+Flower&family=Lexend:wght@100..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+<!-- animation -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    <style>
+
+      *{
+        font-family: "Lexend", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+      }
+      nav{
+        background-color:rgb(3, 32, 49) ;
+      }
+      .navbar-brand {
+        margin-right: -70px;
+      }
+     
+      .login
+    {
+     background-color: #f1d29a ;
+     color:rgb(104, 24, 24);
+     font-size: large;
+     font-weight: 700;
+    }
+    .login:hover{
+      background-color: rgb(184, 176, 153);
+      color: rgb(104, 24, 24);
+      font-weight: 700;
+    }
+    i{
+      color: #f1d29a;
+    }
+   nav i:hover{
+      cursor: pointer;
+      scale: 1.1;
+      
+    }
+    .search{
+      background-color:#f1d39ad0 ;
+
+    }
+    .search::placeholder{
+
+     
+      color:rgb(104, 24, 24);
+      font-size: large;
+    }
+    .search:focus{
+           
+      color:rgb(247, 241, 241);
+      font-size: large;
+      background-color: #f1d39a33;
+    }
+    .landing{
+        height: calc(100vh - 69px);
+        background-color: rgb(3, 32, 49);
+        width: 100%;
+        
+      }
+
+      .landing h1 {
+        color: #f1d29a;
+        margin-bottom: 3vh;
+        display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+      }
+      .landing p{
+        color: rgb(185, 213, 230);
+        font-size: large;
+
+      }
+      .landing p strong{
+        color: green;
+      }
+      .landing button{
+        background-color: #f1d29a;
+        color: rgb(104, 24, 24);
+        padding: 1vh 6vh;
+        font-size: larger;
+        font-weight: 700;
+      }
+      .landing button:hover{
+        background-color: aliceblue;
+        color: rgb(104, 24, 24)
+      }
+      .start::after{
+        content: "";
+        height: 2.5px;
+        width: 240px;
+        background-color: #f1d29a;
+        margin-bottom: 5vh;
+        
+       
+
+
+      }
+      .feature i{
+         left: 50vh;
+         transform: translateX(-50%);
+      }
+      .icon-holder .number , .icon-holder .icon{
+        left:50%;
+        transform: translateX(-50%);
+      }
+        
+        .icon-holder{
+          height: 200px;
+        }
+      .icon-holder .number{
+        font-size: 12rem;
+        color: rgba(128, 128, 128, 0.308);
+      }
+      .icon-holder .icon{
+        bottom:15px;
+        font-size: 2rem;
+        transform: rotate(20deg);
+      }
+    
+      .search-product{
+        margin-top: 8vh;
+        background-color: transparent;
+      }
+       .X::after{
+        margin-top: 2vh;
+        content: "";
+        height: 2.5px;
+        width: 100%;
+        background-color: #f1d29a;
+           
+    
+      }
+      .feat strong ,.About h2{
+        color: rgb(3, 32, 49);
+      }
+
+      .nav li{
+        margin: 0 10px;
+        color:#f1d29a;
+        font-weight: 700;
+        /* box-shadow: 0.2vh 0.2vh 0.1vh 0.1vh gray; */
+        border-radius: 10px;
+        background-color: rgb(170, 55, 10);
+        padding: 10px;
+      }
+      .nav li:hover{
+        cursor: pointer;
+        background-color: rgba(170, 55, 10, 0.774);
+      }
+       h2 ,label{
+       color:rgb(3, 32, 49) ;
+      }
+      label{
+        font-weight: 500;
+      }
+     .form-control::placeholder{
+        color:rgba(170, 55, 10, 0.774);
+        font-weight: 500;
+
+      }
+      .form-control:focus{
+         background-color: #f1d39a5b;
+
+      }
+      .About button{
+            background: #000;
+      }
+      .form-control{
+        background-color: #f1d29a;
+      }
+      .product{
+        
+        margin: 15px;
+        border: solid;
+        border-radius: 10px;
+        
+      }
+      .fa-store{
+        font-size: 80px;
+      }
+      .About p{
+        color: rgb(71, 71, 71);
+        
+
+      }
+      .contact .btn{
+        background: #000;
+      }
+      .contact .btn:hover{
+        background: #000000a6;
+      }
+      .contact ,.About h2{
+        margin: 25vh 0vh ;
+      }
+      
+      
+
+    /* .landing img{
+      margin-right: -5vh;
+    } */
+    </style>
+
+
+    <body  >
+      
+ 
+<!-- start navbar  -->
+
+      <nav class="navbar bg-dark navbar-expand-lg ">
+        <div class="container">
+          <a  class="navbar-brand  " href="#"><img class="w-50 "  src="./pic/pic_log.png " alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">contact</a>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 rounded-4 search" type="search" placeholder="Search" aria-label="Search">
+              <div><i class="fa-solid fa-magnifying-glass my-2 me-5 ms-1"></i></div>
+              <button class="login btn  rounded-3 fw-medium px-3 " type="submit">login</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- end navbar -->
+
+      <!-- start header -->
+       <div class="landing bg-dark  d-flex  align-items-center ">
+       <div class=" d-flex  align-items-center container  flex-column flex-lg-row  ">
+        <div class="d-flex  container flex-column title w-50">
+            <!-- title  -->
+          <h1 >
+              LapTechStore
+            </h1>
+            <!-- paragraphe -->
+            <p class="bg-black-50 lh-lg">Get the best deals on high-performance laptops! Enjoy up to <strong class="offer mx-2">30% off</strong> on selected models. Limited-time offer – shop now!</p>
+            <button  class="btn  d-flex justify-content-center  w-25   ">Show</button>
+        </div>
+
+        <!-- img -->
+        <div class="  d-flex justify-content-lg-end   " >
+           <img src="./pic/header_img2.png" class="w-100 mt-lg-0 mt-3" alt="">
+        </div>
+      </div>
+    </div>
+<div class="bg-white">
+<!-- feature -->
+    <div class="d-flex flex-column w-100" >
+      <div class="container">
+        <div class="d-flex align-items-center my-5 flex-column start" >
+          <div class="my-3">
+            <i class="fa-solid fa-store "></i>
+          </div>
+         
+          <h1 class="text-dark">We Are Good At</h1>
+          <p class="paragraphe text-black-50">Some of thease stuff under</p>
+        </div>
+
+
+  <div class="row feature g-5">
+     <div class="col-md-6 col-lg-4 X d-flex flex-column feat">
+       <div class="feat">
+            <div class="icon-holder position-relative">
+            <i class="fa-solid fa-1 position-absolute   number"></i>
+            <i class="fa-solid fa-laptop  position-absolute icon"></i>
+          </div>
+        </div>
+            <h2 class="text-center text-dark">
+              laptop
+            </h2>
+            <p class="text-dark text-center">Experience top-quality laptops with <strong>high-performance processors</strong>, <strong>long battery life</strong>, and <strong>crystal-clear displays</strong>. Enjoy fast SSD storage, sleek designs, and exclusive deals with every purchase!</p>
+
+       </div>
+
+       <div class="col-md-6 col-lg-4 X d-flex flex-column feat">
+        <div class="feat">
+             <div class="icon-holder position-relative">
+             <i class="fa-solid fa-2 position-absolute   number"></i>
+             <i class="fa-solid fa-desktop  position-absolute icon"></i>
+           </div>
+         </div>
+             <h2 class="text-center text-dark">
+              PC
+             </h2>
+             <p class="text-dark text-center">Experience top-quality laptops with <strong>high-performance processors</strong>, <strong>long battery life</strong>, and <strong>crystal-clear displays</strong>. Enjoy fast SSD storage, sleek designs, and exclusive deals with every purchase!</p>
+ 
+        </div>
+
+        <div class="col-md-6 col-lg-4 X d-flex flex-column feat">
+          <div class="feat">
+               <div class="icon-holder position-relative">
+               <i class="fa-solid fa-3 position-absolute   number"></i>
+               <i class="fa-solid fa-mobile-screen position-absolute icon"></i>
+             </div>
+           </div>
+               <h2 class="text-center text-dark">
+                 mobile
+               </h2>
+               <p class="text-dark text-center">Experience top-quality laptops with <strong>high-performance processors</strong>, <strong>long battery life</strong>, and <strong>crystal-clear displays</strong>. Enjoy fast SSD storage, sleek designs, and exclusive deals with every purchase!</p>
+   
+          </div>
+
+                                  
+
+
+
+   </div>
+      </div>
+    </div>
+<!-- products -->
+    <div class="w-100">
+
+      <nav class="d-flex justify-content-center search-product">
+        <div class="mb-5">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+            <button class=" login btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="nav justify-content-center mb-5">
+          <ul class="d-flex list-unstyled " >
+            <li><i class="fa-solid fa-laptop mx-1"></i>laptop </li>
+            <li><i class="fa-solid fa-desktop mx-1"></i>Pc </li>
+            <li> <i class="fa-solid fa-mobile-screen mx-1"></i>mobile</li>
+          </ul>
+        </div>
+<!-- product -->
+        <div class="product p-3 ">
+        <div class="row justify-content-center d-flex mb-5 ">
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product  p-0">
+                <img class="w-100 " src="./pic/pexels-morningtrain-18105.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product p-0">
+                <img class="w-100" src="./pic/pexels-life-of-pix-7974.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product p-0">
+                <img class="w-100" src="./pic/pexels-craigmdennis-205421.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product p-0">
+                <img class="w-100" src="./pic/pexels-craigmdennis-205421.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product p-0">
+                <img class="w-100" src="./pic/pexels-natri-129208.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+              
+              <div class="col-8 col-lg-3 col-md-5 d-flex flex-column align-items-center product p-0">
+                <img class="w-100" src="./pic/pexels-pixabay-459653.jpg" alt="">
+                <h2>laptop-mac</h2>
+                <p style="color: black; font-weight: 700;">Price <strong style="color: green;">30$</strong></p>
+              </div>
+
+
+        </div>
+        <div class="d-flex justify-content-between my-4">
+          <a href="#previous" class="btn btn-dark m-2">
+            <i class="fa-solid fa-arrow-left mx-2"></i>pervious products
+          </a>
+          <a href="#next" class="btn btn-dark m-2">next products
+           <i class="fa-solid fa-arrow-right mx-2"></i>
+          </a>
+        </div>
+        
+</div>
+      
+      </div>
+    </div>
+<!-- about -->
+    <div class="container About w-100">
+      <h2 class="d-flex justify-content-center align-items-center m-5 about">About</h1>
+      <div class="row d-flex justify-content-center align-items-center">
+        
+        <!-- العمود الأول للنص -->
+        <div class="col-md-4">
+          <p class=" d-flex align-items-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae reprehenderit minima blanditiis aliquid aperiam harum nemo rem incidunt culpa deleniti cumque commodi alias, cum voluptate?</p>
+        </div>
+    
+        <!-- العمود الثاني للأنيميشن -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <dotlottie-player src="https://lottie.host/32dfddaa-8343-4034-8304-3ac9844ea860/CFXyy2yyav.lottie" background="transparent" 
+          speed="1" style="width: 250px; height: 300px" 
+          loop autoplay></dotlottie-player>
+        </div>
+    
+      </div>
+    </div>
+
+<!-- contant -->
+    <div class="d-flex flex-column align-content-center contact w-100">
+      <h2 class="text-center mb-5">Contact Us</h2>
+
+      <form class="row justify-content-center">
+        <div class="col-3"></div>
+        <div class="mb-3 col-10 col-md-6 col-lg-4">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="col-3"></div>
+        
+        <div class="col-3"></div>
+        <div class="mb-3 col-10  col-md-6 col-lg-4">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="col-3"></div>
+        <div class="mb-3 col-10 col-md-6 col-lg-4 ">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
+        </div>
+        <div class="justify-content-center d-flex">
+        <button type="submit" class="btn">Send Message</button>
+      </div>
+      </form>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-light pt-4 pb-2 w-100">
+      <div class="container">
+        <div class="row">
+          <!-- القسم الأول: معلومات المتجر -->
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>We provide high-quality laptops at the best prices.</p>
+          </div>
+    
+          <!-- القسم الثاني: روابط سريعة -->
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-light text-decoration-none">Shop</a></li>
+              <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+              <li><a href="#" class="text-light text-decoration-none">Support</a></li>
+            </ul>
+          </div>
+    
+          <!-- القسم الثالث: وسائل التواصل -->
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-light me-3"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-light me-3"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-light me-3"><i class="fa-brands fa-instagram fa-lg"></i></a>
+          </div>
+        </div>
+    
+        <hr class="my-3 border-light">
+    
+        <p class="text-center">&copy; 2025 Laptop Store. All rights reserved.</p>
+        </footer>
+        </div>
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="sidebars.js"></script>
+  </body>
+</html>
